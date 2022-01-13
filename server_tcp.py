@@ -25,8 +25,9 @@ try:
         if data == "quit\n" or data == "exit\n":
             print("Connection closed by remote client")
             break
-        print("Client says: " + data)
+        print("Client says: " + data.strip("\n"))
         msg = input("Message: ")+"\n"
+        print()
         if msg == "quit\n" or msg == "exit\n":
             client_socket.send(msg.encode())
             break
