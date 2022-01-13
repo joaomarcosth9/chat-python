@@ -28,6 +28,6 @@ try:
         if response == "quit\n" or response == "exit\n":
             print("Connection closed by remote server")
             break
-        print(response)
+        print("Server says: " + response)
 except Exception as error:
     print("Error:", error)

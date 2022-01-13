@@ -12,7 +12,7 @@ try:
     if n != 2:
         raise ValueError("This programs takes exactly one argument")
     # set the IP and port to listen
-    port = 4433
+    port = int(sys.argv[1])
     server.bind(("0.0.0.0", port))
     # set how many simultaneous connections the server will accept
     server.listen(3)
@@ -25,7 +25,7 @@ try:
         if data == "quit\n" or data == "exit\n":
             print("Connection closed by remote client")
             break
-        print(data)
+        print("Client says: " + data)
         msg = input("Message: ")+"\n"
         if msg == "quit\n" or msg == "exit\n":
             client_socket.send(msg.encode())
