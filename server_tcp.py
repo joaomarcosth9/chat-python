@@ -1,9 +1,16 @@
 import socket
+import sys
+
+help_msg = "Usage: python3 server_tcp.py [PORT]"
 
 # socket creation passing the arguments (family, type)
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
+# exception handling
 try:
+    n = len(sys.argv)
+    if n != 2:
+        raise ValueError("This programs takes exactly one argument")
     # set the IP and port to listen
     port = 4433
     server.bind(("0.0.0.0", port))

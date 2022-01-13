@@ -1,6 +1,8 @@
 import socket
 import sys
 
+help_msg = "Usage: python3 client_tcp.py [SERVER] [PORT]"
+
 # socket creation passing the arguments (family, type)
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
