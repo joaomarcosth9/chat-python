@@ -15,7 +15,7 @@ try:
         print(help_msg)
         exit()
     if n != 3:
-        raise ValueError('This programs takes exactly two arguments\n' + help_msg)
+        raise ValueError('This programs takes exactly two arguments')
     arguments = []
     for i in range(1, n):
         arguments.append(sys.argv[i])
