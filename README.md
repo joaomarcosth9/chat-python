@@ -1,5 +1,4 @@
 # Chat Python
-
 A simple server/client TCP chat.
 
 ## Server
