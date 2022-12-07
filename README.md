@@ -1,5 +1,5 @@
 # Chat Python
-A simple server/client TCP chat.
+A simple client/server TCP chat.
 
 ## Server
 Basically, same as: `netcat -lvp [PORT]`
